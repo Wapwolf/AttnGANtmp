@@ -502,8 +502,9 @@ class condGANTrainer(object):
                             im = np.transpose(im, (1, 2, 0))
                             # print('im', im.shape)
                             im = Image.fromarray(im)
-                            fullpath = '%s_g%d.png' % (save_name, k)
+                            fullpath = '%s_g%d.png' % ('content/ouput/', k)
                             im.save(fullpath,"PNG")
+                            
                             
                         for k in range(len(attention_maps)):
                             if len(fake_imgs) > 1:
